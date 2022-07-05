@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type Code string
+type Code int
 
 type Resp struct {
 	Status int
@@ -16,9 +16,9 @@ type Resp struct {
 var RespCache = lru.New(lru.FixedLength, 10)
 
 const (
-	SUCCESS         = "SUCCESS"
-	FAIL            = "FAIL"
-	UNAUTHORIZED    = "UNAUTHORIZED"
+	SUCCESS         = 200
+	FAIL            = 500
+	UNAUTHORIZED    = 401
 	RequestIdHeader = "X-V2raya-Request-Id"
 )
 
