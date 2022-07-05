@@ -5,7 +5,7 @@ import (
 )
 
 var (
-	Version                  = "debug"
+	Version                  = "1.0"
 	FoundNew                 = false
 	RemoteVersion            = ""
 	TickerUpdateGFWList      *time.Ticker
